@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+p {
+  line-height: 2;
+}
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 5.625rem;
+  margin-top: 3.125rem;
+  color: #66bfbf;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #66bfbf;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+
+span {
+  text-decoration: underline;
+}
+
+hr {
+  border: dotted;
+  border-width: 6px 0 0;
+  width: 4%;
+  color: #f1d1d1;
+  margin: 100px auto;
+}
+
+a {
+  margin: 10px 25px;
+  color: #11999E;
+  text-decoration: none;
+}
+a:hover{
+  color: #eaf6f6;
+}
+.top-container {
+  position: relative;
+  padding-top: 10%;
+  background-color: #e4f9f5;
+  margin: 0;
+  width: 100%;
+}
+
+.middle-container {
+  margin: 100px 0 100px 0;
+}
+
+.bottom-cloud {
+  position: absolute;
+  bottom: 45%;
+  left: 25%;
+}
+
+.top-cloud {
+  position: absolute;
+  top: 15%;
+  right: 30%;
+  opacity: 0.6;
+}
+
+.sameer-img {
+  width: 10%;
+  border-radius: 100% 100%;
+}
+
+.heart {
+  color: red;
+  text-decoration: none;
+}
+
+.basketball {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+
+.code {
+  width: 20%;
+  float: left;
+  margin-right: 30px;
+}
+
+.skill-row {
+  width: 40%;
+  margin: 100px auto;
+  text-align: left;
+}
+
+.contact-message {
+  width: 22%;
+  margin: 40px auto 60px;
+}
+
+.btn {
+  background: #11CDD4;
+  background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+  background-image: linear-gradient(bottom, #11CDD4, #11999E);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px;
+  text-shadow: 1px 1px 20px #000000;
+  border: solid #337FED 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #30E3CB;
+  border: solid #2BC4AD 1px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.bottom-container {
+  background-color: #66BFBF;
+  padding: 50px 0 30px 0;
+}
+.copyrite{
+    color: white;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}
