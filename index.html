@@ -79,14 +79,111 @@
     </div>
   </div>
 
-
+  <canvas class = "gc" width="400" height="400"></canvas>
   <div class="bottom-container">
     <a class="footer-link" href="linkedin.com/in/s-a-m-68b34b194">LinkedIn</a>
     <a class="footer-link" href="https://twitter.com/sameeemishra">Twitter</a>
     <a class="footer-link" href="https://mishrisameer.blogspot.com/">Website</a>
     <p class="copyrite">© 2018 Sameer Mishra.</p>
   </div>
+  <script>
+      var t=0
+    window.onload=function(){
+      canv = document.getElementById("gc");
+      ctx = canv.getContext("2d");
+      sco = document.getElementById("sc");
+      score = sco.getContext("2d");
 
+      setInterval(drawScore,1);
+      document.addEventListener("keydown",keyPush);
+
+      setInterval(game,100);
+    }
+    gameScore =0;
+    px = py = 20;
+    gridSize = topCount = 20;
+    xv = yv = 0;
+    ax = ay = 50;
+    trail = [];
+    tail = 5;
+  function drawScore() {
+  score.font = "36px Arial";
+  score.fillStyle = "#0095DD";
+  score.fillText("Score: "+gameScore, 50, 50);
+}
+    function game(){
+
+      px += xv;
+      py += yv;
+      if(px <= 0){
+        px = 400;
+      }
+      if(px > 400){
+        px = 0;
+      }
+      if(py <= 0){
+        py = 400;
+      }
+      if(py > 400){
+        py = 0;
+      }
+      ctx.fillStyle = "black";
+      ctx.fillRect(0,0,canv.width,canv.height);
+
+      ctx.fillStyle = "red";
+      ctx.fillRect(ax+gridSize,ay+gridSize,gridSize-2,gridSize-2);
+
+      ctx.fillStyle = "lime";
+      for(var i=0;i<trail.length;i++){
+        ctx.fillRect(trail[i].x+gridSize,trail[i].y+gridSize,gridSize-2,gridSize-2);
+        if(trail[i].x == px && trail[i].y == py){
+          tail = 5;
+          gameScore = 0;
+          score.fillText(" ", 50, 50);
+        }
+      }
+
+      trail.push({x:px,y:py});
+      while(trail.length > tail){
+        trail.shift();
+      }
+
+      if(((py-ay)*(py-ay) + (px-ax)*(px-ax)) <= 500){
+        tail += 1;
+        gameScore += 1;
+        ax = Math.floor((Math.random()*95)/5)*5+5;
+        ay = Math.floor((Math.random()*95)/5)*5+5;
+      }
+    }
+    function keyPush(e){
+      switch (e.keyCode) {
+        case 37:
+          xv = -20; yv=0;
+          break;
+        case 97:
+          xv = -20; yv=0;
+          break;
+        case 38:
+          xv = 0; yv=-20;
+          break;
+        case 119:
+          xv = 0; yv=-20;
+          break;
+        case 39:
+          xv = 20; yv=0;
+          break;
+        case 100:
+          xv = 20; yv=0;
+          break;
+        case 40:
+          xv = 0; yv=20;
+          break;
+        case 115:
+          xv = 0; yv=20;
+          break;
+      }
+    }
+    </script>
 
 </body>
 
